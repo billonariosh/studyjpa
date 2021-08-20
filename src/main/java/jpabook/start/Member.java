@@ -7,7 +7,7 @@ import javax.persistence.*;  //**
  * Date: 13. 5. 24. Time: 오후 7:43
  */
 @Entity
-@Table(name="MEMBER")
+@Table(name="member")
 public class Member {
 
     @Id
