@@ -1,2 +1,0 @@
-# studyjpa
-jpa공부
