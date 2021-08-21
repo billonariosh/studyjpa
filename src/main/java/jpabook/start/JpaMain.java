@@ -6,7 +6,6 @@ import java.util.List;
 public class JpaMain {
 
     public static void main(String[] args) {
-
         //엔티티 매니저 팩토리 생성
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook");
         EntityManager em = emf.createEntityManager(); //엔티티 매니저 생성
@@ -23,7 +22,7 @@ public class JpaMain {
             e.printStackTrace();
             tx.rollback(); //트랜잭션 롤백
         } finally {
-            em.close(); //엔티티 매니저 종료
+            em.close(); //엔티티 매니저 종료. 준영속성 상태가 됨. => 영속성 컨텍스트를 관리하지 않으므로 준영속성
         }
 
         emf.close(); //엔티티 매니저 팩토리 종료
@@ -37,7 +36,7 @@ public class JpaMain {
         member.setUsername("지한");
         member.setAge(2);
 
-        //등록
+        //등록, 영속성 상태가 됨.
         em.persist(member);
 
         //수정
