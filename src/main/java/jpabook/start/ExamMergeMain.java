@@ -23,7 +23,7 @@ public class ExamMergeMain {
     그러므로 persist()명령어나 merge()명령어를 잘 활용 해야 예외를 방지할 수 있다.
     */
 
-    
+
     static EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook");
 
     public static void main(String args[]){
