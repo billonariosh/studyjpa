@@ -6,8 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="studyjpa" />
-        <module name="jpa0104" />
+        <module name="jpa06" />
       </profile>
     </annotationProcessing>
   </component>
