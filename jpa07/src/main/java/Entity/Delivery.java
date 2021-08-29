@@ -3,9 +3,6 @@ package entity;
 
 import javax.persistence.*;
 
-/**
- * Created by holyeye on 2014. 3. 11..
- */
 @Entity
 public class Delivery {
 

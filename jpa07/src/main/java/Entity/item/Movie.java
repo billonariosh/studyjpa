@@ -3,10 +3,8 @@ package entity.item;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-/**
- * Created by holyeye on 2014. 3. 11..
- */
 @Entity
+// 구분자 값을 설정한다. item 테이블에 DTYPE 필드에 M 값으로 구분자 값으로 들어감.
 @DiscriminatorValue("M")
 public class Movie extends Item {
 

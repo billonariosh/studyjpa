@@ -1,13 +1,12 @@
 package jpabook.model;
 
+import entity.item.Movie;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-/**
- * Created by 1001218 on 15. 4. 5..
- */
 public class Main {
 
     public static void main(String[] args) {
@@ -20,8 +19,23 @@ public class Main {
 
         try {
 
+
             tx.begin(); //트랜잭션 시작
-            //TODO 비즈니스 로직
+
+            Movie movie = new Movie();
+            movie.setDirector("aaa");
+            movie.setActor("bbb");
+            movie.setName("바람과함꼐사라지다");
+            movie.setPrice(10000);
+
+            em.persist(movie);
+
+            em.flush();
+            em.clear();
+
+            Movie findMove = em.find(Movie.class, movie.getId());
+            System.out.println("findMove = " + findMove);
+
             tx.commit();//트랜잭션 커밋
 
         } catch (Exception e) {
