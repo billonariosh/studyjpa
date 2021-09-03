@@ -3,9 +3,6 @@ package jpabook.model.entity;
 import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
-/**
- * Created by 1001218 on 15. 4. 5..
- */
 @MappedSuperclass
 public class BaseEntity {
 

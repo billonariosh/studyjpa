@@ -4,9 +4,6 @@ import jpabook.model.entity.item.Item;
 
 import javax.persistence.*;
 
-/**
- * Created by holyeye on 2014. 3. 11..
- */
 @Entity
 @Table(name = "ORDER_ITEM")
 public class OrderItem {
